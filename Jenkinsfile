@@ -5,6 +5,8 @@ pipeline {
 
 stages{
 
+    agent any
+
     stage{"CheckOutGit"}{
 
         steps{
