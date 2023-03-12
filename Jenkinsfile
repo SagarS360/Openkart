@@ -35,7 +35,7 @@ stages {
                 steps{
 
                     script{
-                        echo "chekcing docker ........................"
+                        echo "checking docker ........................"
                         sh "docker --version"
                         sh "whoami"
 
