@@ -2,12 +2,13 @@
 
 
 pipeline {
-     agent any
+
+    agent any
 
 stages{
 
 
-    stage{"CheckOutGit"}{
+    stage9("CheckOutGit"){
 
         steps{
             echo "cloning the filpkart project from github to container"
@@ -19,7 +20,17 @@ stages{
 
     }
 
-    stage{"Docker Check"}{
+    stage("DockerSetup"){
+        steps{
+            script{
+                def dockerHome = tool 'mydocker'
+                echo ">>>>>>>>${dockerHome}"
+                env.PATH = "${dockerHome}/bin:${env.PATH}"
+            }
+        }
+    }
+
+    stage("Docker Check"){
         steps{
             
             script{
