@@ -4,7 +4,7 @@ pipeline {
 
      agent any
 
-stages {
+    stages {
 
        
 
@@ -44,3 +44,6 @@ stages {
                 }
 
         }
+
+    }
+}
